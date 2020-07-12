@@ -6,43 +6,43 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get tasks_url
+    get root_path
     assert_response :success
   end
 
   test "should get new" do
-    get new_task_url
+    get new_task_path
     assert_response :success
   end
 
   test "should create task" do
     assert_difference('Task.count') do
-      post tasks_url, params: { task: { title: @task.title } }
+      post tasks_path, params: { task: { title: @task.title } }
     end
 
-    assert_redirected_to task_url(Task.last)
+    assert_redirected_to task_path(Task.last)
   end
 
   test "should show task" do
-    get task_url(@task)
+    get task_path(@task)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_task_url(@task)
+    get edit_task_path(@task)
     assert_response :success
   end
 
   test "should update task" do
-    patch task_url(@task), params: { task: { title: @task.title } }
-    assert_redirected_to task_url(@task)
+    patch task_path(@task), params: { task: { title: @task.title } }
+    assert_redirected_to task_path(@task)
   end
 
-  test "should destroy task" do
+  test "should remove task" do
     assert_difference('Task.count', -1) do
-      delete task_url(@task)
+      delete task_path(@task)
     end
 
-    assert_redirected_to tasks_url
+    assert_redirected_to tasks_path
   end
 end
