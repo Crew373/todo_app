@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :logged_in_user, only:[:edit, :update, :destroy]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
@@ -56,7 +57,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: 'Task was successfully remove.' }
+      format.html { redirect_to tasks_path, notice: 'Task was successfully remove.' }
       format.json { head :no_content }
     end
   end

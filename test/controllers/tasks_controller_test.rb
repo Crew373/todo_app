@@ -35,7 +35,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
 
   test "should update task" do
     patch task_path(@task), params: { task: { title: @task.title } }
-    assert_redirected_to task_path(@task)
+    assert_redirected_to login_path
   end
 
   test "should remove task" do
