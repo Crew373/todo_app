@@ -32,5 +32,5 @@ $ sudo apt-get update && sudo apt-get install yarn
 ### webpacker
 * If you don't have webpacker installed, you can run the following command.
 ```
-rails webpacker:install
+$ rails webpacker:install
 ```

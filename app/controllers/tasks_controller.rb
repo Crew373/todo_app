@@ -29,7 +29,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
+        format.html { redirect_to @task, notice: 'Success!' }
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
+        format.html { redirect_to @task, notice: 'Success!' }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to tasks_path, notice: 'Task was successfully remove.' }
+      format.html { redirect_to tasks_path, notice: 'Success!' }
       format.json { head :no_content }
     end
   end
