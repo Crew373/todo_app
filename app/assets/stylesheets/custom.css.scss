@@ -14,10 +14,16 @@ tbody {
 }
 
 body {
+  padding: 5%;
+  width: 100%;
+  text-align:center;
   background-color: #ffffff;
-  margin-top: 5%;
-  margin-left: 25%;
   font-family: verdana, arial, helvetica, sans-serif;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 section {
@@ -41,8 +47,8 @@ textarea {
 
 
 table {
-  left: 10%;
-  width: 60%;
+  width: 50%;
+  text-align:center;
 }
 
 
@@ -56,9 +62,6 @@ h1 {
   font-size: 3.5em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  width: 80%;
-  margin: 1 auto;
-  
 }
 
 h2 {
@@ -67,16 +70,11 @@ h2 {
   letter-spacing: -1px;
   margin-bottom: 30px;
   font-weight: normal;
-  width: 80%;
-  margin: 3.5% 22%;
 }
 
 p {
   font-size: 1.5em;
   line-height: 1.7em;
-  width: 100%;
-  margin: 3.5% 25%;
-  max-width: 500px;
 }
 
 td {
@@ -127,7 +125,6 @@ input, textarea, select, .uneditable-input {
   color: red;
   ul {
     color: red;
-    margin: 0 0 30px 0;
   }
 }
 
@@ -147,6 +144,4 @@ div {
 label {
   font-size: 1.5em;
   display: block;
-  width: 80%;
-  margin: 0 22%;
 }
