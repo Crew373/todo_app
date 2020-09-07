@@ -14,7 +14,6 @@ tbody {
 }
 
 body {
-  padding: 5%;
   width: 100%;
   text-align:center;
   background-color: #ffffff;
@@ -70,6 +69,11 @@ h2 {
   letter-spacing: -1px;
   margin-bottom: 30px;
   font-weight: normal;
+}
+
+h3 {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
 }
 
 p {
