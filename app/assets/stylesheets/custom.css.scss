@@ -40,8 +40,13 @@ textarea {
   }
 }
 
-#notice {
-  color: green;
+.notifications {
+  color: white;
+  text-align: center;  
+
+  .notice {
+    background-color: lightBlue;
+  }
 }
 
 
