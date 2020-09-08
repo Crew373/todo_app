@@ -1,11 +1,13 @@
 class TasksController < ApplicationController
-  before_action :logged_in_user, only:[:edit, :update, :destroy]
+  before_action :logged_in_user
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    puts current_user.to_yaml
+    @tasks = current_user.tasks
   end
 
   # GET /tasks/1
@@ -25,7 +27,7 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.new(task_params)
 
     respond_to do |format|
       if @task.save
@@ -65,7 +67,7 @@ class TasksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = Task.find(params[:id])
+      @task = current_user.tasks.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
