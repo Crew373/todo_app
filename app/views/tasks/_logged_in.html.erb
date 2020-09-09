@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Limit</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -11,7 +12,16 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <th><%= task.title %></th>
+        <td><%= task.title %></td>
+        <td>
+          <%= "Expiration" if (task.limit_date - Date.today).to_i < 0 %>
+          <%= "Today" if (task.limit_date - Date.today).to_i == 0 %>
+          <%= "Tomorrow" if (task.limit_date - Date.today).to_i == 1 %>
+          <% (2..6).each do |day| %>
+            <%= "#{day} days" if (task.limit_date - Date.today).to_i == day %>
+          <% end %>
+          <%= task.limit_date if (task.limit_date - Date.today).to_i >= 7 %>
+        </td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Remove', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
