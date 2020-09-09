@@ -1,6 +1,6 @@
-<p><%= link_to 'New Task', new_task_path %></p>
+<button type="button" class="btn btn-secondary"><%= link_to 'New Task', new_task_path %></button>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -19,5 +19,3 @@
     <% end %>
   </tbody>
 </table>
-
-<p><%= link_to "Log out", logout_path, method: :delete %></p>

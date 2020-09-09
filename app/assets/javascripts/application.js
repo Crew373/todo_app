@@ -1,6 +1,10 @@
 /*global $*/
 //= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require turbolinks
+//= require_tree
 
 $(function(){
-  setTimeout("$('.notifications').fadeOut('slow')", 2500);
+  setTimeout("$('.notifications').fadeOut('slow')", 1500);
 });
