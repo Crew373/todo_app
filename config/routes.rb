@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get    '/login',         to: 'sessions#new'
   post   '/login',         to: 'sessions#create'
   delete '/logout',        to: 'sessions#destroy'
+  get    '/static_pages/about', to:'static_pages#about'
   resources :users, only: [:new, :show, :create]
   resources :tasks
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
