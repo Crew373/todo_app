@@ -6,5 +6,5 @@
 //= require_tree
 
 $(function(){
-  setTimeout("$('.notifications').fadeOut('slow')", 1500);
+  setTimeout("$('.notifications').fadeOut('slow')", 2000);
 });

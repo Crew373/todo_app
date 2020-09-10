@@ -84,9 +84,7 @@ th {
 
 li {
   font-size: 1.5em;
-  font-color: #ffffff
 }
-
 
 /* header */
 
@@ -168,6 +166,7 @@ footer ul li {
   margin-left: 15px;
 }
 
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -193,12 +192,15 @@ $gray-medium-light: #eaeaea;
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 15%;
+  width: 100%;
   margin-bottom: 15px;
-  @include box_sizing;
   text-align: center;
-  margin: 0.5% 22%;
-  max-width: 500px;
+  padding-top: 10px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }
 
 div {
@@ -208,18 +210,23 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
 
 #error_explanation {
-  width: 100%;
-  border: 2px solid red;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+  color: red;
+  text-align: center;
+  ul {
+    
+    color: red;
+    margin: 0 0 30px 0;
+  }
 }
 
 label {
   font-size: 1.5em;
-  display: block;
+  // display: block;
 }
