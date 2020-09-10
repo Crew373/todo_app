@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   def index
     @tasks = current_user.tasks.order('limit_date').all
   end
-
+  
   # GET /tasks/1
   # GET /tasks/1.json
   def show
@@ -71,6 +71,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:title, :limit_date)
+      params.require(:task).permit(:title, :limit_date, :status)
     end
 end
