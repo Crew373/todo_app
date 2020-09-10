@@ -16,9 +16,9 @@
         <td><%= task.title %></td>
         <!--<td><%= task.status %></td>-->
         <td>
-          <%= "Expiration" if (task.limit_date - Date.today).to_i < 0 %>
-          <%= "Today" if (task.limit_date - Date.today).to_i == 0 %>
-          <%= "Tomorrow" if (task.limit_date - Date.today).to_i == 1 %>
+          <font color="#ff0000"><%= "Expiration" if (task.limit_date - Date.today).to_i < 0 %></font>
+          <font color="#008000"><%= "Today" if (task.limit_date - Date.today).to_i == 0 %></font>
+          <font color="#ffa500"><%= "Tomorrow" if (task.limit_date - Date.today).to_i == 1 %></font>
           <% (2..6).each do |day| %>
             <%= "#{day} days" if (task.limit_date - Date.today).to_i == day %>
           <% end %>
