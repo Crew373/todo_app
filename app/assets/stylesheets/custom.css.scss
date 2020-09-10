@@ -8,9 +8,9 @@
 $gray-medium-light: #eaeaea;
 
 /* universal */
-thead {
-  text-align: center;
-}
+// tbody {
+//   empty-cells : show;
+// }
 
 body {
   padding-top: 10%;
@@ -22,6 +22,7 @@ body {
 table {
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 }
 
 section {
@@ -75,12 +76,12 @@ p {
 }
 
 td {
-  padding: 0.1em;
   font-size: 1.5em;
   color: #000000;
 }
 
 th {
+  width: 10%;
   text-align: center;
   font-size: 1.5em;
 }
@@ -205,6 +206,7 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
 
 div {
   &.field, &.actions {
