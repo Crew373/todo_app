@@ -84,12 +84,17 @@ th {
   width: 10%;
   text-align: center;
   font-size: 1.5em;
+  
 }
 
-li {
-  font-size: 1.5em;
-}
-
+ a {
+   color: #000000;
+   display: inline-block;
+   
+   :hover {
+     opacity: 0.6;
+   }
+ }
 /* header */
 
 #logo {
@@ -100,6 +105,13 @@ li {
   letter-spacing: -1px;
   padding-top: 0.3%;
   font-weight: bold;
+}
+
+.box {
+  border: 1px solid;
+  border-color: #696969;
+  border-radius: 10px;
+  padding: 1px;
 }
 
 #logo:hover {
@@ -114,7 +126,9 @@ header ul {
 
 header ul li {
   float: left;
-  margin-left: 15px
+  margin-left: 15px;
+  color: #c0c0c0;
+  font-size: 1.5em;
 }
 
 header ul li:nth-child(1) {
@@ -198,7 +212,7 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  text-align: center;
+  text-align: left;
   padding-top: 10px;
   @include box_sizing;
 }
@@ -232,5 +246,32 @@ div {
 
 label {
   font-size: 1.5em;
-  // display: block;
+  margin: 5% 0% 0%;
+  float: left;
+}
+
+.actions {
+  margin: 8% 0% 0%;
+  padding: 0% 35%;
+}
+
+.ExpirationBox {
+  border: 1px solid;
+  border-color: #ff0000;
+  border-radius: 10px;
+  padding: 1px;
+}
+
+.TodayBox {
+  border: 1px solid;
+  border-color: #008000;
+  border-radius: 10px;
+  padding: 1px;
+}
+
+.TomorrowBox {
+  border: 1px solid;
+  border-color: #ffa500;
+  border-radius: 10px;
+  padding: 1px;
 }
